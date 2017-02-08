@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../client/404.html'))
+  res.sendFile(path.join(__dirname, '../client/404.min.html'))
 })
 
 
