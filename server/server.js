@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '../client/'), { maxAge: 31557600000 }));
 
-
+//serving minified html
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../client/index.html'))
+  res.sendFile(path.join(__dirname, '../client/index.min.html'))
 })
 
 app.get('*', function (req, res) {
